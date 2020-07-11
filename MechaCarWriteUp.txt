@@ -1,0 +1,107 @@
+Section 1  MechaCar mpg Analysis
+
+    In this section, our goal is to predict the mpg of MechaCar prototypes.
+
+    we have mpg as dependent variable and vehicle length, vehicle weight, spoiler angle, groud clearance and AWD
+    as our potential independent variables.
+
+    We used cor() function to quantify the strength of the correlation between variables. Correlation matrix is included.
+
+    Correlation Coefficient Matrix
+
+                     vehicle_length vehicle_weight spoiler_angle ground_clearance           AWD          mpg
+    vehicle_length       1.00000000    -0.12271790    0.02577114      -0.31663112    0.08565668   0.60947984
+    vehicle_weight      -0.12271790     1.00000000   -0.11307851       0.08511338   -0.03698098   0.09068314
+    spoiler_angle        0.02577114    -0.11307851    1.00000000      -0.21112057   -0.09120266  -0.02083999
+    ground_clearance    -0.31663112     0.08511338   -0.21112057       1.00000000   -0.15214456   0.32874886
+    AWD                  0.08565668    -0.03698098   -0.09120266      -0.15214456    1.00000000  -0.14166977
+    mpg                  0.60947984     0.09068314   -0.02083999       0.32874886   -0.14166977   1.00000000
+
+
+    Based on our understanding of automobile and correlation matrix, We picked vehicle_length, vehicle_weight,
+    ground_clearance and AWD as independent variables for our multiple linear regression model.
+
+    The multiple linear regression model results show that:
+    1. The Intercept provided a non-random amount of variance to the mpg values in the dataset. 
+       It is -9.728e+01 and significant at 0.001 level.
+
+    2. The slop of of the linear model is not zero.
+       The coefficient of vehicle_length is 6.0811 and is significant at 0.001 level.
+       The coefficient of vehicle_weight is 1.169e-03 and is significant at 0.1 level.
+       The coefficient of ground_clearance is 3.419 and is significant at 0.001 level.
+       
+    3. R-squared value is 0.708. This linear model can predict mpg of MechaCar prototypes at 70.8% acurracy.
+
+        Multiple Linear Regression Model Results
+
+        Coefficients:
+                        Estimate Std. Error t value Pr(>|t|)    
+        (Intercept)      -9.728e+01  1.448e+01  -6.717 2.68e-08 ***
+        vehicle_length    6.233e+00  6.550e-01   9.516 2.40e-12 ***
+        vehicle_weight    1.169e-03  6.857e-04   1.706    0.095 .  
+        ground_clearance  3.419e+00  5.276e-01   6.481 6.03e-08 ***
+        AWD              -3.749e+00  2.515e+00  -1.490    0.143    
+        ---
+        Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+        Residual standard error: 8.781 on 45 degrees of freedom
+        Multiple R-squared:  0.708,	Adjusted R-squared:  0.682 
+        F-statistic: 27.27 on 4 and 45 DF,  p-value: 1.586e-11
+
+
+Section 2  Suspension Coil Analysis
+
+    1. Summary statistics table for the suspension coil’s pounds-per-inch (PSI)
+
+        Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+        1452    1498    1500    1499    1501    1542 
+        
+        Variance    Standard Deviation
+        62.29356    7.892627
+
+        One Sample Chi-Square test on variance
+
+        data:  Suspension_Coil$PSI
+        X-squared = 92.817, df = 149, p-value = 8.951e-05
+        alternative hypothesis: true variance is less than 100
+        95 percent confidence interval:
+        0.00000 76.21287
+        sample estimates:
+        variance of x 
+            62.29356 
+ 
+        We conducted a one sample variance test with null hypothesis: true variance is greater than 100.
+        p-value is 8.951e-05. We reject null hypothesis.
+        The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils
+        must not exceed 100 pounds per inch.
+
+    2. The suspension coil’s pound-per-inch results are statistically different from the mean population results of
+       1,500 pounds per inch because p-value < 2.2e-16, we reject the null hypothesis: sample mean = 1,500. 
+	    
+        One Sample t-test
+
+        data:  log10(Suspension_Coil$PSI)
+        t = -7978095, df = 149, p-value < 2.2e-16
+        alternative hypothesis: true mean is not equal to 1500
+        95 percent confidence interval:
+        3.175361 3.176103
+        sample estimates:
+        mean of x 
+        3.175732 
+
+Section 3  Future Study
+
+    Our current study is on the data of AutosRUs’ newest prototype, the MechaCar. Since competitors' products can dramatically
+    affact AutosRUs’ sales, We need consider the performance of the MechaCar prototype vehicle to other comparable vehicles on the market. 
+    
+    For this purpose, we need compare some traditional car characteristics that buyer care about, like price, fuel efficiency, color options,
+    car size and service. Other than these, since technology has become the deciding factor for car buyers selecting a vehicle,
+    we also need consider safety features like automatic emergency braking, Forward collision warning, blind spot alert and rear cross traffic warning. 
+    Some desired technologies of all are convenience and entertainment features like in-car Wi-Fi and voice commands. 
+
+    To compare MechaCar with other comparable vehicles on the market, we need collect other manufacturers' data. 
+    We need their price and promotions, mpg, car size. These are countinious numerical variables.
+    We also need their color and service options, safety features options and other convenience and entertainment features options. These are categorical variables.
+
+    To quantify the differnces between MechaCar and other comparable cars, we can conduct two sample t-test for the mean of those numerical variables.
+    We can conduct Chi-Square test for those categorical variables.
