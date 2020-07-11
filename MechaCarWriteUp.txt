@@ -1,3 +1,5 @@
+AutosRUs MechaCar Analysis
+
 Section 1  MechaCar mpg Analysis
 
     In this section, our goal is to predict the mpg of MechaCar prototypes.
