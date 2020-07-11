@@ -102,8 +102,7 @@ Section 3  Future Study
     Some desired technologies of all are convenience and entertainment features like in-car Wi-Fi and voice commands. 
 
     To quantify the differnces between MechaCar and other comparable cars, we can conduct two sample t-tests for the numerical variables from 
-    MechaCar's sample and other vehicles' sample.
-    We can conduct Chi-Square tests for those categorical variables from MechaCar's sample and other vehicles' sample. 
+    MechaCar's sample and other vehicles' sample. We can conduct Chi-Square tests for those categorical variables from MechaCar's sample and other vehicles' sample. 
     The null hypothesis is: there is no differnce between the metric of MechaCar and other comparable products.
 
     To test the hypotheses, we need collect data on the extra metrics we proposed for MechaCar and all metrics of other manufacturers' vehicles. 
