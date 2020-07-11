@@ -101,10 +101,14 @@ Section 3  Future Study
     we also need consider safety features like automatic emergency braking, Forward collision warning, blind spot alert and rear cross traffic warning. 
     Some desired technologies of all are convenience and entertainment features like in-car Wi-Fi and voice commands. 
 
-    To compare MechaCar with other comparable vehicles on the market, we need collect other manufacturers' data. 
-    We need their price and promotions, mpg, car size. These are countinious numerical variables.
+    To quantify the differnces between MechaCar and other comparable cars, we can conduct two sample t-tests for the numerical variables from 
+    MechaCar's sample and other vehicles' sample.
+    We can conduct Chi-Square tests for those categorical variables from MechaCar's sample and other vehicles' sample. 
+    The null hypothesis is: there is no differnce between the metric of MechaCar and other comparable products.
+
+    To test the hypotheses, we need collect data on the extra metrics we proposed for MechaCar and all metrics of other manufacturers' vehicles. 
+    For the extra data, we need price and promotions, mpg, car size. These are countinious numerical variables.
     We also need their color and service options, safety features options and other convenience and entertainment features options. 
     These are categorical variables.
 
-    To quantify the differnces between MechaCar and other comparable cars, we can conduct two sample t-test for the mean of those numerical variables.
-    We can conduct Chi-Square test for those categorical variables.
+
