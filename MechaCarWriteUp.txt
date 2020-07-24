@@ -28,9 +28,7 @@ Section 1  MechaCar mpg Analysis
        It is -9.728e+01 and significant at 0.001 level.
 
     2. The slop of of the linear model is not zero.
-       The coefficient of vehicle_length is 6.0811 and is significant at 0.001 level.
-       The coefficient of vehicle_weight is 1.169e-03 and is significant at 0.1 level.
-       The coefficient of ground_clearance is 3.419 and is significant at 0.001 level.
+       F-statistic: 27.27 on 4 and 45 DF,  p-value: 1.586e-11
        
     3. R-squared value is 0.708. This linear model can predict mpg of MechaCar prototypes at 70.8% acurracy.
 
@@ -77,19 +75,19 @@ Section 2  Suspension Coil Analysis
         The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils
         must not exceed 100 pounds per inch.
 
-    2. The suspension coil’s pound-per-inch results are statistically different from the mean population results of
-       1,500 pounds per inch because p-value < 2.2e-16, we reject the null hypothesis: sample mean = 1,500. 
+    2. The suspension coil’s pound-per-inch is statistically equal to mean population results of 1,500 pounds per inch
+       because p-value = 0.06, we fail to reject the null hypothesis: sample mean = 1,500. 
 	    
         One Sample t-test
 
-        data:  log10(Suspension_Coil$PSI)
-        t = -7978095, df = 149, p-value < 2.2e-16
+        data:  Suspension_Coil$PSI
+        t = -1.8931, df = 149, p-value = 0.06028
         alternative hypothesis: true mean is not equal to 1500
         95 percent confidence interval:
-        3.175361 3.176103
+        1497.507 1500.053
         sample estimates:
         mean of x 
-        3.175732 
+        1498.78 
 
 Section 3  Future Study
 
